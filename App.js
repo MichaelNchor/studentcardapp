@@ -130,8 +130,9 @@ app.get('/details', function(req, res){
   });  
 })
 
-app.listen(process.env.APP_PORT, function (req, res) {
-  console.log("Server running on port: " + process.env.APP_PORT);
+const port = process.env.APP_PORT || 5000;
+app.listen(port, function (req, res) {
+  console.log("Server running on port: " + port);
 });
 
 // ipconfig
