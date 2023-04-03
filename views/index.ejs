@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./resources/tailwind.min.css"/>
+    <script src="./resources/tailwind.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Inter&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@500&display=swap" rel="stylesheet">   
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">    
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <title>StudentID Card</title>
+  </head>
+  <body class="idspace bg-teal-50">
+    <nav class="nav0 bg-white border-gray-200 dark:bg-zinc-800 w-full">
+      <div
+        class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl px-4 md:px-6 py-2.5"
+      >
+        <a href="/" class="flex items-center">
+          <img
+            src="image/knust_logo.png"
+            class="h-6 mr-3 sm:h-9"
+            alt="KNUST Logo"
+          />
+          <span class="self-center text-xs font-semibold dark:text-white w-32"
+            >Kwame Nkrumah University of Science & Technology</span
+          >
+        </a>
+        <div class="flex items-center">
+          <a
+            href="/how-to-use"
+            class="mr-6 text-sm font-medium text-gray-500 dark:text-white hover:underline"
+            >How to use?</a
+          >
+          <a
+            href="#"
+            class="text-sm font-medium text-blue-600 dark:text-blue-500 hover:underline"
+            >Logout</a
+          >
+        </div>
+      </div>
+    </nav>
+    <nav class="flex justify-between shadow-md nav1 bg-gray-500 dark:bg-white">
+      <div
+        class="flex flex-wrap max-md:flex-row-reverse w-full justify-between max-w-screen-xl mx-auto px-4 md:px-6"
+      >
+        <div class="flex items-center">
+          <ul
+            class="flex flex-row max-md:items-start w-full space-x-3 md:space-x-8 text-sm font-medium"
+          >
+            <li>
+              <a
+                href="/"
+                class="text-gray-900 dark:text-zinc-800 hover:underline"
+                aria-current="page"
+                >Home</a
+              >
+            </li>
+            <!-- <li>
+              <a
+                href="#"
+                class="text-gray-900 dark:text-zinc-800 hover:underline"
+                >Company</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-gray-900 dark:text-zinc-800 hover:underline"
+                >Team</a
+              >
+            </li> -->
+          </ul>
+        </div>
+        <div class="flex items-center my-2.5">
+          <a
+            href="tel:5541251234"
+            class="mr-6 text-sm font-medium text-gray-500 dark:text-white hover:underline"
+            ><img
+              class="w-10 h-10 rounded-full"
+              src="<%= image %>"
+              alt="Rounded avatar"
+          /></a>
+          <a href="/how-to-use" class="text-sm font-medium hover:underline"
+            ><%= fName %> <%= sName %> <%= oName %></a
+          >
+        </div>
+      </div>
+    </nav>
+    <div
+      class="flex max-w-screen-xl border rounded-lg bg-sky-10 border border-gray-100 shadow-lg justify-between lg:mx-auto my-1.5 py-2.5"
+    >
+      <div
+        class="flex whitespace-nowrap font-sans font-bold px-4 md:px-4 py-2.5 text-gray-900"
+      >
+        <h6 class="text-lg mt-0.5 font-bold dark:text-black">My Student Card</h6>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 ml-2 mt-[-1px]">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15 9h3.75M15 12h3.75M15 15h3.75M4.5 19.5h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5zm6-10.125a1.875 1.875 0 11-3.75 0 1.875 1.875 0 013.75 0zm1.294 6.336a6.721 6.721 0 01-3.17.789 6.721 6.721 0 01-3.168-.789 3.376 3.376 0 016.338 0z" />
+        </svg>
+      </div>
+      <button
+        type="button"
+        class="share shadow-lg text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-600 dark:focus:ring-blue-800 inline-flex m-1.5"
+      >
+        Share
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+          class="w-5 h-5 ml-2"
+        >
+          <path
+            d="M13 4.5a2.5 2.5 0 11.702 1.737L6.97 9.604a2.518 2.518 0 010 .792l6.733 3.367a2.5 2.5 0 11-.671 1.341l-6.733-3.367a2.5 2.5 0 110-3.475l6.733-3.366A2.52 2.52 0 0113 4.5z"
+          />
+        </svg>
+      </button>
+      <div class="overlay"></div>
+      <div class="popup">
+        <header>
+          <span>Share</span>
+          <div class="close"><i class="uil uil-times"></i></div>
+        </header>
+        <div class="content">
+          <p>Share this link via</p>
+          <ul class="icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+            <a href="#"><i class="fab fa-telegram-plane"></i></a>
+          </ul>
+          <p>Or copy link</p>
+          <div class="field">
+            <i class="url-icon uil uil-link"></i>
+            <input type="text" id="copylink" readonly value="https://michaelnchor.github.io/<%= qrCode %>/">
+            <button>Copy</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="flex max-md:flex-wrap flex-row max-w-screen-xl mx-auto">
+      <div class="flex flex-col max-w-screen-xl mx-auto font-sans font-bold">
+        <div class="p-2">
+          <!---Front Card-->
+          <%- include("Front") -%>
+        </div>
+        <div class="p-2">
+          <!--Id Back-->
+          <img src="image/idback.svg" alt="back" />
+        </div>
+      </div>
+      <div
+        class="side flex mb-3 rounded-xl bg-gray-100 items-center pt-3 flex-col shadow-xl p-2 border border-gray-100 space-x-6 basis-1/2 flex-wrap flex-row-reverse max-w-screen-xl max-md:justify-center w-full max-w-screen-xl mx-auto qrcode h-fit"
+      >
+        <img
+          src="image/reload.svg"
+          onclick="getQrCode()"
+          alt="qrcode"
+          id="qrImage"
+          class="bg-white p-8 rounded-lg w-56"
+        />
+        <div class="font-sans font-bold text-sm p-6">
+          Scan the Qr code to check validity 👍
+        </div>
+      </div>
+    </div>
+    <footer class="h-full">
+      <div
+        class="flex justify-center px-4 py-6 bg-gray-900 dark:bg-gray-900 items-center"
+      >
+        <span class="text-sm text-gray-300 dark:text-gray-300 sm:text-center"
+          >© 2023
+          <a href="/"
+            >Kwame Nkrumah University of Science & Technology</a
+          >. All Rights Reserved.
+        </span>
+      </div>
+    </footer>
+    <script>
+      function getQrCode(){
+        const img = document.getElementById('qrImage');
+        const qrCode = document.getElementById('copylink');
+        const imgsrc = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${qrCode.value}`;
+        img.src = imgsrc;
+      }
+
+      const viewBtn = document.querySelector(".share"),
+      overlay = document.querySelector(".overlay"),
+      popup = document.querySelector(".popup"),
+      close = popup.querySelector(".close"),
+      field = popup.querySelector(".field"),
+      input = field.querySelector("input"),
+      copy = field.querySelector("button");
+
+      viewBtn.onclick = ()=>{
+        popup.classList.toggle("show");
+        overlay.classList.toggle("show");
+      }
+      close.onclick = ()=>{
+        viewBtn.click();
+      }
+
+      copy.onclick = ()=>{
+        input.select(); //select input value
+        if(document.execCommand("copy")){ //if the selected text copy
+          field.classList.add("active");
+          copy.innerText = "Copied";
+          setTimeout(()=>{
+            window.getSelection().removeAllRanges(); //remove selection from document
+            field.classList.remove("active");
+            copy.innerText = "Copy";
+          }, 3000);
+        }
+      }      
+    </script>
+  </body>
+</html>

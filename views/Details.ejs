@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./resources/tailwind.min.css" rel="stylesheet"/>
+    <script src="./resources/tailwind.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Inter&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@500&display=swap" rel="stylesheet">   
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">    
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <title>Student-Details</title>
+  </head>
+  <body class="flex flex-row flex-wrap">
+    <div class="flex flex-col mx-2 my-2 border-2 border-gray-100 rounded-lg p-4">        
+    <h1 class="text-xl my-2">Student Details</h1>
+    <table>
+      <tr>
+        <img
+          src="image/profileimg.png"
+          alt="profileimg"
+          class="bg-white my-4 rounded-lg w-48"
+        />        
+      </tr>
+      <tr>
+        <td><strong>Name: </strong></td>
+        <td>Nchor Michael Adingo</td>
+      </tr>
+      <tr>
+        <td><strong>Level: </strong></td>
+        <td>100</td>
+      </tr>
+      <tr>
+        <td><strong>Programme: </strong></td>
+        <td>BSc. Mathematics</td>
+      </tr>
+      <tr>
+        <td><strong>Admission Date: </strong></td>
+        <td>2019-May</td>
+      </tr>
+      <tr>
+        <td><strong>Graduation Date: </strong></td>
+        <td>2023-April</td>
+      </tr>
+      <tr>
+        <td><strong>Index Number: </strong></td>
+        <td>4558618</td>
+      </tr>
+      <tr>
+        <td><strong>Email: </strong></td>
+        <td>manchor127@gmail.com</td>
+      </tr>
+      <tr>
+        <td><strong>Student Email: </strong></td>
+        <td>manchor@knust.edu.gh</td>
+      </tr>
+      <tr>
+        <td><strong>Nationality: </strong></td>
+        <td>Ghanaian</td>
+      </tr>                  
+    </table>                
+    </div>
+    <div class="flex flex-col flex-wrap" >
+        <div class="flex flex-row flex-wrap border-2 border-gray-100 m-2 p-4 rounded-lg">
+          <!---Front Card-->
+          <div>
+          <%- include("Front") -%>
+        </div>
+          <!--Id Back-->
+          <img src="image/idback.svg" alt="back" />
+        </div>
+        <div class="flex border-2 border-gray-100 m-2 p-4 rounded-lg">
+            <div>
+            <img src="/image/qr.png" alt="front" class="w-48">
+        </div>
+        <div>
+            <img src="/image/validated.png" alt="front" class="w-96">
+        </div>
+        </div>
+    </div>
+  </body>
+</html>
