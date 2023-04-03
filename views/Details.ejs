@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="./resources/tailwind.min.css" rel="stylesheet"/>
-    <script src="./resources/tailwind.min.js"></script>
+    <link href=".././resources/tailwind.min.css" rel="stylesheet"/>
+    <script src=".././resources/tailwind.min.js"></script>
     <link
       href="https://fonts.googleapis.com/css?family=Inter&display=swap"
       rel="stylesheet"
@@ -22,12 +22,12 @@
     <title>Student-Details</title>
   </head>
   <body class="flex flex-row flex-wrap">
-    <div class="flex flex-col mx-2 my-2 border-2 border-gray-100 rounded-lg p-4">        
+    <div class="flex flex-col mx-2 my-2 border-2 border-gray-100 rounded-lg p-4 mx-auto">        
     <h1 class="text-xl my-2">Student Details</h1>
     <table>
       <tr>
         <img
-          src="image/profileimg.png"
+          src="../image/profileimg.png"
           alt="profileimg"
           class="bg-white my-4 rounded-lg w-48"
         />        
@@ -66,15 +66,23 @@
       </tr>                  
     </table>                
     </div>
-    <div class="flex flex-col flex-wrap" >
+    <div class="flex flex-col flex-wrap mx-auto" >
         <div class="flex flex-row flex-wrap border-2 border-gray-100 m-2 p-4 rounded-lg">
           <!---Front Card-->
           <div>
           <%- include("Front") -%>
         </div>
           <!--Id Back-->
-          <img src="image/idback.svg" alt="back" />
+          <img src="../image/idback.svg" alt="back" />
         </div>
+        <!-- <div class="flex border-2 border-gray-100 m-2 p-4 rounded-lg">
+            <div>
+            <img src="image/qr.png" alt="front" class="w-48">
+        </div>
+        <div>
+            <img src="image/validated.png" alt="front" class="w-96">
+        </div>
+        </div> -->        
     </div>
   </body>
 </html>

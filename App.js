@@ -9,11 +9,8 @@ app.use(cors());
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/views/"));
 app.use(bodyParser.urlencoded({ extended: true }));
-
+let studentroute;
 app.get("/", function (req, res) {
-
-const studentroute = "";
-
 var config = {
   method: 'get',
   maxBodyLength: Infinity,
@@ -104,7 +101,8 @@ app.get('/how-to-use', function(req, res){
   });  
 })
 
-app.get('/' + studentroute, function(req, res){
+app.get('/student/:studentroute', function(req, res){
+  studentroute = req.query.studentroute;
   var config = {
     method: 'get',
     maxBodyLength: Infinity,
@@ -134,7 +132,7 @@ app.get('/' + studentroute, function(req, res){
       indexNo: response.data.indexNo,
       qrCode: response.data.qrCode,
     };
-    res.render("Details",student);
+    res.render("student-details",student);
   })
   .catch(function (error) {
     const student = {
