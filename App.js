@@ -12,6 +12,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get("/", function (req, res) {
 
+const studentroute = "";
+
 var config = {
   method: 'get',
   maxBodyLength: Infinity,
@@ -26,11 +28,14 @@ var config = {
 axios(config)
 .then(function (response) {
   console.log(response.data);
+  studentroute = response.data.referenceNo;
   const student = {
     fName: response.data.fName,
     sName: response.data.sName,
     oName: response.data.oName,
     image: response.data.image,
+    level: response.data.level,
+    email: response.data.email,
     programme: response.data.programme,
     stdNo: response.data.referenceNo,
     nationality: response.data.nationality,
@@ -47,13 +52,15 @@ axios(config)
     sName: 'loading...',
     oName: 'loading...',
     image: 'image/defaultprofile.png',
+    level: 'loading...',
+    email: 'loading...',    
     programme: 'loading...',
     stdNo: 'loading...',
     nationality: 'loading...',
     admissionDate: 'loading...',
     graduationDate: 'loading...',
     indexNo: 'loading...',
-    qrCode: "loading...",
+    qrCode: "loading...",   
   };
   res.render("index",student);
   console.log(error);
@@ -64,7 +71,7 @@ app.get('/how-to-use', function(req, res){
   var config = {
     method: 'get',
     maxBodyLength: Infinity,
-    url: 'https://localhost:7078/api/Student/1',
+    url: 'http://nchormichael-001-site1.atempurl.com/api/Student/1',
     headers: { 
       'Content-Type': 'application/json', 
     },
@@ -80,6 +87,8 @@ app.get('/how-to-use', function(req, res){
       sName: response.data.sName,
       oName: response.data.oName,
       image: response.data.image,
+      level: response.data.level,
+      email: response.data.email,
       programme: response.data.programme,
       stdNo: response.data.referenceNo,
       nationality: response.data.nationality,
@@ -95,11 +104,11 @@ app.get('/how-to-use', function(req, res){
   });  
 })
 
-app.get('/details', function(req, res){
+app.get('/' + studentroute, function(req, res){
   var config = {
     method: 'get',
     maxBodyLength: Infinity,
-    url: 'https://localhost:7078/api/Student/1',
+    url: 'http://nchormichael-001-site1.atempurl.com/api/Student/1',
     headers: { 
       'Content-Type': 'application/json', 
     },
@@ -115,6 +124,8 @@ app.get('/details', function(req, res){
       sName: response.data.sName,
       oName: response.data.oName,
       image: response.data.image,
+      level: response.data.level,
+      email: response.data.email,
       programme: response.data.programme,
       stdNo: response.data.referenceNo,
       nationality: response.data.nationality,
@@ -126,6 +137,22 @@ app.get('/details', function(req, res){
     res.render("Details",student);
   })
   .catch(function (error) {
+    const student = {
+      fName: 'loading...',
+      sName: 'loading...',
+      oName: 'loading...',
+      image: 'image/defaultprofile.png',
+      level: 'loading...',
+      email: 'loading...',    
+      programme: 'loading...',
+      stdNo: 'loading...',
+      nationality: 'loading...',
+      admissionDate: 'loading...',
+      graduationDate: 'loading...',
+      indexNo: 'loading...',
+      qrCode: "loading...",   
+    };
+    res.render("Details",student);
     console.log(error);
   });  
 })
